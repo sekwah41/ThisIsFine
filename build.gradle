@@ -1,0 +1,20 @@
+plugins {
+	id 'fabric-loom' version '0.2.0-SNAPSHOT'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+archivesBaseName = "thisisfine"
+version = "1.1.0"
+
+minecraft {
+}
+
+dependencies {
+	// https://modmuss50.me/fabric.html
+	// http://fabric.asie.pl/use/
+	minecraft "com.mojang:minecraft:19w09a"
+	mappings "net.fabricmc:yarn:19w09a.1"
+	modCompile "net.fabricmc:fabric-loader:0.3.7.109"
+}
