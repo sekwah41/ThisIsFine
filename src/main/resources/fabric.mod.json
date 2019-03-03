@@ -1,0 +1,14 @@
+{
+  "id": "thisisfine",
+  "name": "This Is Fine",
+  "description": "This Is Fine",
+  "version": "1.0.0",
+  "side": "universal",
+  "initializer": "_this.is.fine.ThisIsFine",
+  "requires": {
+  },
+  "mixins": {
+    "common": "mixins.thisisfine.common.json",
+    "client": "mixins.thisisfine.common.json"
+  }
+}

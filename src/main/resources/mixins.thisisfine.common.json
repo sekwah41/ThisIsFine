@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "_this.is.fine.mixins.common",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinThisIsFine",
+    "MixinPlayerIsFine",
+    "MixinEntityIsFine"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
