@@ -9,6 +9,6 @@
   },
   "mixins": {
     "common": "mixins.thisisfine.common.json",
-    "client": "mixins.thisisfine.common.json"
+    "client": "mixins.thisisfine.client.json"
   }
 }

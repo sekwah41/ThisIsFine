@@ -15,6 +15,8 @@ dependencies {
 	// https://modmuss50.me/fabric.html
 	// http://fabric.asie.pl/use/
 	minecraft "com.mojang:minecraft:19w09a"
-	mappings "net.fabricmc:yarn:19w09a.1"
+	mappings "net.fabricmc:yarn:19w09a.2"
 	modCompile "net.fabricmc:fabric-loader:0.3.7.109"
+
+	modCompile "net.fabricmc:fabric:0.2.3.108"
 }

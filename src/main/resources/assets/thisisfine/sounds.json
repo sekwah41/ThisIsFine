@@ -1,0 +1,11 @@
+{
+  "thatshot": {
+    "category": "players",
+    "sounds": [
+      {
+        "name": "thisisfine:player/hot",
+        "stream": false
+      }
+    ]
+  }
+}

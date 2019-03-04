@@ -3,6 +3,8 @@
   "package": "_this.is.fine.mixins.client",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "FireIsFineMixin",
+    "BlockIsFineMixin"
   ],
   "injectors": {
     "defaultRequire": 1
