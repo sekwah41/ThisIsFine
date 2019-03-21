@@ -1,0 +1,18 @@
+{
+  "type": "crafting_shaped",
+  "pattern": ["I I", "GnG"],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "G": {
+      "item": "minecraft:black_stained_glass_pane"
+    },
+    "n": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result": {
+    "item": "thisisfine:thisisfine_shades"
+  }
+}
