@@ -5,7 +5,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.ItemProvider;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
@@ -17,7 +17,7 @@ public enum CustomArmourClass implements ArmorMaterial {
 
 
     SHADES("thisisfine_shades", 33, new int[]{2, 5, 6, 2}, 15, SoundIsFine.EQUIP_SHADES, 0.0F, () -> {
-        return Ingredient.ofItems(new ItemProvider[]{Items.EMERALD});
+        return Ingredient.ofItems(new ItemConvertible[]{Items.EMERALD});
     });
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};

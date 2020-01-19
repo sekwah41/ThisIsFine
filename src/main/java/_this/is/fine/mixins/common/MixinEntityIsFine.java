@@ -4,7 +4,7 @@ import _this.is.fine.ThisIsFine;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.text.TranslatableTextComponent;
+import net.minecraft.text.TranslatableText;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -15,14 +15,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(Entity.class)
 public class MixinEntityIsFine {
 
-    @Shadow
-    private int fireTimer;
+    /*@Shadow
+    private int fireTicks;*/
 
     @Inject(method = "setOnFireFor", at = @At("HEAD"), cancellable = true)
     public void setOnFireFor(int int_1, CallbackInfo info) {
         if(!((Entity) (Object)this).isOnFire() && int_1 > 0 && ((Object) this)instanceof ServerPlayerEntity && !((ServerPlayerEntity) (Object)this).isCreative() &&
                 ((PlayerEntity) (Object)this).inventory.armor.get(3).getItem() != ThisIsFine.ITEM_SHADES) {
-            ((ServerPlayerEntity) (Object)this).getServer().getPlayerManager().sendToAll(new TranslatableTextComponent("chat.type.text", ((ServerPlayerEntity) (Object)this).getDisplayName(), "This Is Fine"));
+            ((ServerPlayerEntity) (Object)this).getServer().getPlayerManager().sendToAll(new TranslatableText("chat.type.text", ((ServerPlayerEntity) (Object)this).getDisplayName(), "This Is Fine"));
         }
     }
 

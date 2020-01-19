@@ -17,3 +17,5 @@ useless/
 
 run/
 *.launch
+
+*.hprof

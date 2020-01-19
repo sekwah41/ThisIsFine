@@ -4,17 +4,17 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.PumpkinBlock;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.client.util.TextFormat;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.text.StringTextComponent;
-import net.minecraft.text.TextComponent;
-import net.minecraft.text.TextFormat;
-import net.minecraft.text.TranslatableTextComponent;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
+import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 
+import java.awt.*;
 import java.util.List;
 
 public class ShadesItem extends ArmorItem {
@@ -24,8 +24,8 @@ public class ShadesItem extends ArmorItem {
     }
 
     @Environment(EnvType.CLIENT)
-    public void buildTooltip(ItemStack itemStack_1, World world_1, List<TextComponent> list_1, TooltipContext tooltipContext_1) {
-        list_1.add(new TranslatableTextComponent("shades.item.descriptor").method_11020().applyFormat(TextFormat.ITALIC, TextFormat.GRAY));
+    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
+        tooltip.add(new TranslatableText("shades.item.descriptor").formatted(Formatting.ITALIC, Formatting.GRAY));
     }
 
 }

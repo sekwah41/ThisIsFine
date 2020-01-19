@@ -24,7 +24,7 @@ public class ThisIsFine<ITEM_SHADES> implements ModInitializer {
 
     public static List<Block> ignoreList = Arrays.asList(Blocks.AIR, Blocks.STRUCTURE_VOID, Blocks.VOID_AIR, Blocks.CAVE_AIR, Blocks.BEDROCK, Blocks.FIRE);
 
-    public static Item ITEM_SHADES = new ShadesItem(CustomArmourClass.SHADES, EquipmentSlot.HEAD, (new Item.Settings()).itemGroup(ItemGroup.COMBAT));
+    public static Item ITEM_SHADES = new ShadesItem(CustomArmourClass.SHADES, EquipmentSlot.HEAD, (new Item.Settings()).group(ItemGroup.COMBAT));
 
     @Override
     public void onInitialize() {

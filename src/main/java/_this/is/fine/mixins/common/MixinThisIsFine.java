@@ -23,15 +23,15 @@ public class MixinThisIsFine {
     }
 
     @Inject(method = "getSpreadChance", at = @At("RETURN"), cancellable = true)
-    private void getSpreadChance(Block block, CallbackInfoReturnable<Integer> info) {
-        if(isBlockFine(block) && info.getReturnValue() == 0) {
+    private void getSpreadChance(BlockState state, CallbackInfoReturnable<Integer> info) {
+        if(isBlockFine(state.getBlock()) && info.getReturnValue() == 0) {
             info.setReturnValue(5);
         }
     }
 
-    @Inject(method = "getBurnChance(Lnet/minecraft/block/Block;)I", at = @At("RETURN"), cancellable = true)
-    private void getBurnChance(Block block, CallbackInfoReturnable<Integer> info) {
-        if(isBlockFine(block) && info.getReturnValue() == 0) {
+    @Inject(method = "getBurnChance(Lnet/minecraft/block/BlockState;)I", at = @At("RETURN"), cancellable = true)
+    private void getBurnChance(BlockState state, CallbackInfoReturnable<Integer> info) {
+        if(isBlockFine(state.getBlock()) && info.getReturnValue() == 0) {
             info.setReturnValue(5);
         }
     }
@@ -41,7 +41,7 @@ public class MixinThisIsFine {
     }
 
     @Inject(method = "onBlockAdded", at = @At("RETURN"))
-    public void onBlockAdded(BlockState blockState_1, World world_1, BlockPos blockPos_1, BlockState blockState_2, CallbackInfo info) {
+    public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean moved, CallbackInfo info) {
         if(random.nextInt(1000) <= 1) {
             ThisIsFine.logger.info("This Is Fine.");
         }

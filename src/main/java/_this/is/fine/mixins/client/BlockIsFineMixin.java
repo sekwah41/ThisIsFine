@@ -2,7 +2,6 @@ package _this.is.fine.mixins.client;
 
 import _this.is.fine.ThisIsFine;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockRenderLayer;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.MinecraftClient;
